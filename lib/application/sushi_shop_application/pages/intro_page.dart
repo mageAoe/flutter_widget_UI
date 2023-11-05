@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget_ui/application/sushi_shop_application/components/button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -12,24 +13,48 @@ class IntroPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(25.0),
         child: Column(
-        children: [
-          const SizedBox(height: 25),
-          // shop name
-          Text('SUSHI MAN', 
-            style: GoogleFonts.dmSerifDisplay(fontSize: 28,color: Colors.white)
-          ),
-          const SizedBox(height: 25),
-          // icon
-          Padding(
-            padding: const EdgeInsets.all(50.0),
-            child: Image.asset('lib/images/sushi_one.png'),
-          )
-          // title
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            const SizedBox(height: 25),
+            // shop name
+            Text('SUSHI MAN', 
+              style: GoogleFonts.dmSerifDisplay(fontSize: 28,color: Colors.white)
+            ),
 
-          // subtitle
+            const SizedBox(height: 25),
 
-          // get started button
-        ],
+            // icon
+            Padding(
+              padding: const EdgeInsets.all(50.0),
+              child: Image.asset('lib/images/sushi_one.png'),
+            ),
+
+            const SizedBox(height: 25),
+
+            // title
+            Text('THE TASTE OF JAPANESE FOOD',
+              style: GoogleFonts.dmSerifDisplay(fontSize: 44,color: Colors.white)
+            ),
+
+            //  const SizedBox(height: 25),
+
+            // subtitle
+            Text('Feel the taste of the most popular Japanese food from anywhere and anytime',
+              style: TextStyle(
+                color: Colors.grey[300],
+                height: 2.0,
+              )
+            ),
+
+            // get started button
+            MyButton(
+              text: 'Get Started', 
+              onTap: (){
+                Navigator.pushNamed(context, '/menupage');
+              }
+            )
+          ],
       ),
       )
     );
