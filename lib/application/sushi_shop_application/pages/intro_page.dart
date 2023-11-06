@@ -30,14 +30,14 @@ class IntroPage extends StatelessWidget {
               child: Image.asset('lib/images/sushi_one.png'),
             ),
 
-            const SizedBox(height: 25),
+            // const SizedBox(height: 25),
 
             // title
             Text('THE TASTE OF JAPANESE FOOD',
               style: GoogleFonts.dmSerifDisplay(fontSize: 44,color: Colors.white)
             ),
 
-            //  const SizedBox(height: 25),
+             const SizedBox(height: 25),
 
             // subtitle
             Text('Feel the taste of the most popular Japanese food from anywhere and anytime',

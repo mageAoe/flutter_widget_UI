@@ -16,4 +16,5 @@ class Food{
   String get _imagePath => imagePath;
   String get _rating => rating; 
 
+  
 }
