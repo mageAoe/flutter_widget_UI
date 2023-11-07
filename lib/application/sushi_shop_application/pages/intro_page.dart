@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_ui/application/sushi_shop_application/components/button.dart';
+import 'package:flutter_widget_ui/application/sushi_shop_application/theme/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -9,7 +10,7 @@ class IntroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 138, 60, 55),
+      backgroundColor: primaryColor,
       body: Padding(
         padding: const EdgeInsets.all(25.0),
         child: Column(
