@@ -1,0 +1,58 @@
+{
+  "id": "4343439",
+  "name": "flutter widget ui",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7587761",
+      "name": "下载",
+      "font_class": "xiazai",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "14929707",
+      "name": "下载 (4)",
+      "font_class": "xiazai4",
+      "unicode": "e67b",
+      "unicode_decimal": 59003
+    },
+    {
+      "icon_id": "24610735",
+      "name": "喜爱",
+      "font_class": "xiai",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "27401967",
+      "name": "爱心",
+      "font_class": "aixin",
+      "unicode": "eddc",
+      "unicode_decimal": 60892
+    },
+    {
+      "icon_id": "28771727",
+      "name": "喜爱",
+      "font_class": "xiai1",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "33306691",
+      "name": "平台下载",
+      "font_class": "pingtaixiazai",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "37946508",
+      "name": "下载",
+      "font_class": "xiazai1",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    }
+  ]
+}

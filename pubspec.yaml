@@ -43,6 +43,8 @@ dependencies:
   convex_bottom_bar: ^3.2.0
   cached_network_image: ^3.2.3
   flutter_screenutil: ^5.9.0
+  photo_view: ^0.14.0
+  image_gallery_saver: ^2.0.3
 
 dev_dependencies:
   flutter_test:
@@ -87,10 +89,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+     - family: Schyler
+       fonts:
+         - asset: assets/fonts/iconfont.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

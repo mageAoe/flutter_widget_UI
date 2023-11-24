@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import './models/Vertical.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:google_fonts/google_fonts.dart'; // 谷歌字体
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart'; // 瀑布流布局
 import 'package:cached_network_image/cached_network_image.dart'; //图片缓存
+import './page/view_picture_page.dart'; // 查看图片
+import '../../Animation/page_router_change_animation/index.dart';
 
 class HomePage extends StatefulWidget {
   final Color? color;
@@ -102,14 +104,26 @@ class MasonryGridViewCountWidget extends StatelessWidget {
               children: [
                 // Image.network(users[index].img),
                 // "http://via.placeholder.com/350x150"
-                ClipRRect(
-                  borderRadius: const BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15)),
-                  child: CachedNetworkImage(
-                    imageUrl: users[index].img,
-                    // placeholder: (context, url) => const CircularProgressIndicator(),
-                    progressIndicatorBuilder: (context, url, downloadProgress) =>
-                        LinearProgressIndicator(value: downloadProgress.progress),
-                    errorWidget: (context, url, error) => const Icon(Icons.error),
+                InkWell(
+                  onTap: (){
+                    // Navigator.push(context, MaterialPageRoute(builder: (context){
+                    //   return ViewPicturePage(imgUrl: users[index].img);
+                    // }));
+                    /// 使用动画的方式跳转
+                    Navigator.of(context).push(CustomPageRoute(
+                      builder: (context) => ViewPicturePage(imgUrl: users[index].img),
+                      page:  ViewPicturePage(imgUrl: users[index].img),
+                    ));
+                  },
+                  child: ClipRRect(
+                    borderRadius: const BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15)),
+                    child: CachedNetworkImage(
+                      imageUrl: users[index].img,
+                      // placeholder: (context, url) => const CircularProgressIndicator(),
+                      progressIndicatorBuilder: (context, url, downloadProgress) =>
+                          LinearProgressIndicator(value: downloadProgress.progress),
+                      errorWidget: (context, url, error) => const Icon(Icons.error),
+                    ),
                   ),
                 ),
                 const SizedBox(height: 15),
